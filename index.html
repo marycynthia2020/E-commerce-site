@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/styles.css" />
+    <title>Document</title>
+  </head>
+  <body class="relative">
+    <!-- Navbar -->
+     <section class="w-full shadow-lg fixed bg-white inset-x-0 ">
+        <nav class="py-6 px-2 w-full 2xl:w-[80vw] mx-auto text-[#777777] flex items-center justify-between  ">
+            <div>
+                <img src="images/Logo.svg" alt="woodmart logo"/>
+            </div>
+            <div class="flex gap-8 items-center justify-between">
+                <a href="#" title="Get expert advice" class="hidden md:block">
+                    Expert Advice
+                </a>
+                <a href="#" title="Get to  know us" class="hidden md:block">
+                    About US
+                </a>
+                <a href="#" title="Track your orders" class="hidden md:block">
+                    TrackOrder
+                </a>
+                <div class="w-12 h-12 rounded-full border border-black  flex items-center justify-center relative cursor-pointer" id="open-cart-btn">
+                    <img src="/images/cart.svg" class="h-6 ">
+                    <div class=" h-4 w-4 font-normal flex items-center justify-center text-[12px] text-white bg-black shadow-2xl rounded-full  absolute top-0 -right-1">
+                        <span>0</span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>
+     
+    <main>
+        <!-- Hero Section -->
+        <section class=' lg:h-[400px] bg-[#1b5bb4] text-white w-full px-2 mb-10 lg:mb-40 ' >
+            <div class=' w-full 2xl:w-[80vw] mx-auto grid lg:grid-cols-12 lg:grid-rows-12 gap-4'>
+                <div class='lg:col-span-8 lg:row-span-12 lg:grid lg:grid-cols-6'>
+                    <div class='col-span-3 px-4  lg:px-10 py-2  bg-[#d1bda5]  flex flex-col gap-6 justify-center'>
+                        <p>From <span class="text-[#1b5bb4] text-lg">the best </span>designers</p>
+                        <h1 class="text-5xl font-bold leading-snug w-4/5">Check Out Our Expert Advice</h1>
+                        <button class='text-white bg-[#004aa8] p-3 px-8 w-fit'>OUR SERVICES</button>
+                    </div>
+                    <div class='col-span-3'>
+                        <img src="images/bathtube1.jpg" alt="bath-tube" class="w-[100%]"/>
+                    </div>
+                </div>
+                <div class='lg:col-span-4 lg:row-span-7 px-4 lg:px-10 py-6  flex flex-col gap-4 bg-carpenter bg-cover'>
+                    <h2 class="text-4xl font-bold">Our Services</h2>
+                    <p class="text-lg leading-snug w-3/5">Discover all the ways to get your product</p>
+                    <button class='text-white bg-[#004aa8] p-3 px-8 w-fit'>VIEW MORE</button>
+                </div>
+                <div  class=' lg:col-span-4 row-span-5 px-4 lg:px-10 py-6  flex flex-col gap-4 bg-cart bg-cover bg-no-repeat bg-center'>
+                    <h2 class="text-4xl font-bold">Free Shipping</h2>
+                    <p class="text-lg leading-snug w-3/5">Free shippping on orders of $100 or more</p>
+                </div>
+            </div>
+        </section>
+         <!-- products -->
+        <section class="px-2 w-full 2xl:w-[80vw] mx-auto font-semibold mb-6 ">
+            <div class="flex flex-col xl:flex-row gap-4 xl:justify-between items-center text-xl mb-4">
+                <button >All Products</button>
+                <div class="flex items-center gap-4 text-[#333333B3]">
+                <button>New</button>
+                <button>Featured</button>
+                <button>Top Sellers</button>
+                </div>
+            </div>
+            <div class=" grid md:grid-cols-2 lg-grid-cols-3 xl:grid-cols-4 gap-0 items-stretch" id="products-container">
+    
+            </div>
+        </section>
+        <!--NewsLetter sign up  -->
+        <section class='py-4 px-2 w-full bg-[#1246AB] mb-8'>
+            <div class="2xl:w-[80vw] mx-auto text-white flex flex-col lg:flex-row lg:items-center gap-6 lg:justify-between ">
+                <div class="flex gap-6 items-center" >
+                    <div class="w-11 h-11 bg-transparent">
+                        <img src="/images/envelopee.svg" alt="NewsLetter" class="w-11 h-11 " />
+                    </div>
+                    <div class="flex flex-col gap-3">
+                    <h2 class="text-3xl font-bold ">Sign Up To Us Newsletter</h2>
+                    <p>Be the First To Know. Signup to the Newsletter</p>
+                    </div>
+                </div>
+                <form action="" class="flex flex-col sm:flex-row items-center gap-2">
+                    <input type="text" placeholder="enter email address" class="p-3 lg:pr-20 w-full md:w-fit rounded-sm outline-none" />
+                    <button class="bg-white p-4 py-3 text-black  w-full rounded-sm md:w-fit md:px-10 lf:p-4">Sign Up</button>
+                </form>
+            </div>
+        </section>
+     </main>
+     <footer>
+        <div class=" cursor-pointer px-2 w-full 2xl:w-[80vw] mx-auto grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5  text-[#767676] items-center mb-8">
+            <div>
+                <div class="mb-6">
+                <img src="images/Logo.svg" alt="woodmart logo" />
+                </div>
+                <ul class=" mr-4">
+                <li class="mb-4">
+                    Condimentum adipiscing vel neque dis nam parturient orci at
+                    scelerisque neque dis nam parturient.
+                </li>
+                <li class="flex gap-3 items-center mb-4">
+                    <img src="/images/direction-svgrepo-com.svg" alt="" class="w-4">
+                    <span>451 Wall Street, UK, London</span>
+                </li>
+                <li class="flex gap-3 items-center mb-4">
+                    <img src="/images/smart-phone-svgrepo-com.svg" alt="" class="w-4">
+                    <span>Phone: (064) 332-1233</span>
+                </li>
+                <li class="flex gap-3 items-center mb-8">
+                    <img src="/images/message-square-lines-alt-svgrepo-com.svg" alt="" class="w-4">
+                    <span>
+                    Fax: (099) 453-1357</span>
+                </li>
+                
+                </ul>
+            </div>
+            <ul>
+                <li class="text-black font-medium mb-4">Our Stores</li>
+                <li class=" mb-4">New York</li>
+                <li class=" mb-4">London SF</li>
+                <li class=" mb-4">Cockfosters BP</li>
+                <li class=" mb-4">Los Angeles</li>
+                <li class=" mb-4">Chicago</li>
+                <li class=" mb-8">Las Vegas</li>
+            </ul>
+
+            <ul>
+                <li class="text-black font-medium mb-4">Useful Links</li>
+                <li class=" mb-4">Privacy Policy</li>
+                <li class=" mb-4">Payment and Delivery</li>
+                <li class=" mb-4">Promotions</li>
+                <li class=" mb-4">Servicess</li>
+                <li class=" mb-4">About Us</li>
+                <li class=" mb-8">Track Order</li>
+            </ul>
+
+            
+            <ul>
+                <li class="text-black font-medium mb-4">Footer menu</li>
+                <li class=" mb-4">Instagram profile</li>
+                <li class=" mb-4">New Colection</li>
+                <li class=" mb-4">Shop</li>
+                <li class=" mb-4">Contact Us</li>
+                <li class=" mb-4">Latest News</li>
+                <li class=" mb-8">purchase Theme</li>
+            </ul>
+            <div>
+                <p class="mb-4 font-medium text-black">Available On:</p>
+                <img src="/images/googleplay1.svg" alt="google playstore" class="mb-4" />
+                <img src="images/applestore1.svg" alt="Apple store"  class="mb-4"/>
+                <p class="mb-4 font-medium text-black">Social Links:</p>
+                <div class="flex  items-center gap-3 text-4xl">
+                    <img src="/images/facebook-svgrepo-com (1).svg" alt="" class="w-9">
+                    <img src="/images/twitter-2-svgrepo-com.svg" alt="" class="w-9" >
+                    <img src="/images/instagram-svgrepo-com.svg" alt="" class="w-9" >
+                   <img src="/images/youtube-svgrepo-com.svg" alt="" class="w-9" >
+                </div>
+            </div>
+        </div>
+        <!-- second footer -->
+        <div class="w-fulltext-[#767676] ">
+            <hr />
+            <div class="px-2 w-full 2xl:w-[80vw] mx-auto py-4 flex flex-col lg:flex-row items-center justify-between gap-4">
+                <p class="text-center text-sm lg:text-[16px] "><span class="font-bold">WOODMART</span> © 2025 CREATED BY <span class="text-red-800">X</span><span class="font-bold">TEMOS STUDIO</span>. CODED BY <span class="font-bold">CHINEMEREM UGABJA</span>.</p>
+                <img src="images/cards1.png" alt="ATM Cards" width={225}/>
+            </div>
+        </div>
+     </footer>
+         <!-- shopping carts -->
+        <section class="hidden p-4 w-[80vw] sm:w-[40vw]  lg:w-[30vw] 2xl:w-[20vw] shadow-lg h-screen fixed top-0 right-0 z-10 bg-white" id="cart">
+            <div class="text-xl lg:text-2xl font-medium flex items-center justify-between mb-6">
+                <h2>Shopping Cart</h2>
+                <button id="close-cart-btn">X Close</button>
+            </div>
+            <div class="max-h-[80vh] overflow-y-auto cart-items-container">
+                <!-- added products -->
+            </div>
+            <div class="font-bold text-2xl flex items-center gap-10 fixed bottom-5 mx-auto">
+                <p>Subtotal:</p>
+                <p class="text-[#1246AB]">0</p>
+            </div>
+        </section>
+     <!-- <script src="/script/products.js"></script> -->
+     <script type="module" src="/script/index.js" ></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Work Sans", sans-serif;
+}
+
+.image-container{
+  height: 160px;
+  width: 200px;
+}
+.images{
+  width: 200px;
+  height: 160px;
+}
