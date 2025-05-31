@@ -1,6 +1,7 @@
 const shoppingCart = document.getElementById("cart")
 const productContainer = document.getElementById("products-container")
 const cartContainer = document.querySelector(".cart-items-container")
+const showTotalCost = document.getElementById("total")
 
 export function toggleCart() {
     shoppingCart.classList.toggle("hidden")
@@ -92,14 +93,26 @@ export function handleProductsInteraction(increaseQtyBtn, reduceQtyBtn, addItemT
       if(foundInCart) {
         foundInCart.qty = found.qty 
         localStorage.setItem("cartItem", JSON.stringify(cart))
+        calculatePrice(cart)
           renderCartItems(cart)
         return
        } cart.push(found)
+       console.log(document.getElementById("cart-length"))
        document.getElementById("cart-length").textContent = cart.length
         localStorage.setItem("cartItem", JSON.stringify(cart))
          renderCartItems(cart)
+         calculatePrice(cart)
     })
    
   })
 }
 
+export function calculatePrice(items){
+  let totalCost = 0
+   items.forEach(item => {
+   let perCost = item.price * item.qty
+    totalCost += perCost
+    showTotalCost.textContent = `$${totalCost.toLocaleString()}`
+     console.log(totalCost.toLocaleString())
+  })
+}
