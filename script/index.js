@@ -12,6 +12,8 @@ const productIncrementButtons = document.querySelectorAll(".increment-btn");
 const addToCartBtn = document.querySelectorAll(".add-to-cart-btn")
 const OpenCartBtn = document.getElementById("open-cart-btn");
 const closeCartbtn = document.getElementById("close-cart-btn");
+const shoppingCart = document.getElementById("cart")
+
 document.getElementById("cart-length").textContent = cart.length
 OpenCartBtn.addEventListener("click", toggleCart);
 closeCartbtn.addEventListener("click", toggleCart);

@@ -40,7 +40,7 @@ export function renderCartItems(items) {
    cartContainer.innerHTML = ""
     items.forEach(item => {
       cartContainer.innerHTML += `
-        <div class="flex gap-4 items-center border mb-6 p-4">
+        <div class="flex gap-4 items-center mb-6 p-4">
             <div class="flex gap-8 items-center  ">
               <div class="w-[100px] h-[100px]">
                 <img src=${item.image} alt="" class="w-full h-full" />
