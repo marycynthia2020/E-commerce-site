@@ -1,7 +1,6 @@
 const shoppingCart = document.getElementById("cart")
 const productContainer = document.getElementById("products-container")
 const cartContainer = document.querySelector(".cart-items-container")
-// productContainer.addEventListener("click", allClick)    
 
 export function toggleCart() {
     shoppingCart.classList.toggle("hidden")
@@ -48,24 +47,22 @@ export function renderCartItems(items) {
               <div class="flex flex-col gap-4">
                 <p class="text-xl">${item.category}</p>
                 <div class="flex items-center gap-2  p-3 bg-[#1246AB] text-white justify-between">
-                <button data-product-id=${item.id} class="decrement-btn">-</button>
-                <span id=${item.id}>${item.qty}</span>
-                <button data-product-id=${item.id} class="increment-btn">+</button>
+                <button data-product-id=${item.id} class="cart-decrement-btn">-</button>
+                <span id="cart ${item.id}">${item.qty}</span>
+                <button data-product-id=${item.id} class="cart-increment-btn">+</button>
                 </div>
                 <p>
                   ${item.qty} * <span class="text-[#1246AB]">${item.price}</span> / each
                 </p>
               </div>
             </div>
-             <button data-product-id = ${item.id}>X</button>
+             <button id = ${item.id} class= "remove-item">X</button>
           </div>
       `
-
     })
 }
 
 export function handleProductsInteraction(increaseQtyBtn, reduceQtyBtn, addItemToCartBtn, arrayofProducts, cart) {
-
   // Adding Event to the incremmenet buttons of the displayed product
   increaseQtyBtn.forEach(btn => {
     btn.addEventListener("click", (e)=> {
@@ -93,11 +90,12 @@ export function handleProductsInteraction(increaseQtyBtn, reduceQtyBtn, addItemT
       const found = arrayofProducts.find(item => item.id ===  +e.target.dataset.productId)
       let foundInCart = cart.find(item => item.id === found.id)
       if(foundInCart) {
-        found.qty = foundInCart.qty
+        foundInCart.qty = found.qty 
         localStorage.setItem("cartItem", JSON.stringify(cart))
           renderCartItems(cart)
         return
        } cart.push(found)
+       document.getElementById("cart-length").textContent = cart.length
         localStorage.setItem("cartItem", JSON.stringify(cart))
          renderCartItems(cart)
     })
@@ -105,28 +103,3 @@ export function handleProductsInteraction(increaseQtyBtn, reduceQtyBtn, addItemT
   })
 }
 
-export function handleCartButtonsInteraction(increaseQtyBtn, reduceQtyBtn, arrayofProducts){
-  increaseQtyBtn.forEach(btn => {
-    btn.addEventListener("click", (e)=> {
-      console.log(e.target.dataset.productId)
-      console.log("hi")
-       const found = arrayofProducts.find(item => item.id === +e.target.dataset.productId )
-      if(found){
-          found.qty++
-           document.getElementById(found.id).textContent = found.qty
-           console.log( document.getElementById(found.id))
-      }
-    })
-  })
-
-  reduceQtyBtn.forEach(btn => {
-    btn.addEventListener("click", (e)=> {
-      const found = arrayofProducts.find(item => item.id === +e.target.dataset.productId )
-      if(found && found.qty > 0 ){
-          found.qty--
-           document.getElementById(found.id).textContent = found.qty
-      }
-    })
-  })
-
-}
